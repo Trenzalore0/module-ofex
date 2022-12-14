@@ -1,0 +1,21 @@
+{
+    "quote": {
+        "column": {
+            "tr_ofex_used": true,
+            "tr_ofex_is_used": true
+        }
+    },
+    "ofex_coupon_code": {
+        "column": {
+            "ofex_id": true,
+            "ofex_name": true,
+            "ofex_description": true,
+            "ofex_discount_percent": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

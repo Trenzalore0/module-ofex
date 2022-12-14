@@ -1,0 +1,22 @@
+<?php
+
+/** @var \Trenzalore\Ofex\Block\Dashboard\Index $block */
+?>
+
+<div class="start" data-bind="scope: 'ofex-offers-dashboard'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "ofex-offers-dashboard": {
+                        "component": "Trenzalore_Ofex/js/dashboard/index"
+                    }
+                }
+            }
+        }
+    }
+</script>

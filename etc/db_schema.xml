@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+
+    <table name="quote" resource="default" engine="innodb" comment="Add column on this existing table">
+        <column name="tr_ofex_is_used" xsi:type="boolean" nullable="false" comment="" />
+        <column name="tr_ofex_used" xsi:type="json" nullable="true" comment="json data list" />
+    </table>
+
+    <table name="ofex_coupon_code" resource="default" engine="innodb" comment="">
+        <column name="ofex_id" xsi:type="int" unsigned="true" nullable="false" identity="true" comment="Ofex ID" />
+        <column name="ofex_name" xsi:type="varchar" nullable="false" length="250" comment="Ofex name" />
+        <column name="ofex_description" xsi:type="varchar" nullable="true" length="500" comment="Ofex Description" />
+        <column name="ofex_discount_percent" xsi:type="int" unsigned="true" nullable="false" identity="false" comment="Ofex discount" />
+
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="true" comment="Ofex Code Creation Date" />
+        <column xsi:type="timestamp" name="updated_at" on_update="true" nullable="true" comment="Ofex Code Update Date" />
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="ofex_id" />
+        </constraint>
+    </table>
+
+</schema>

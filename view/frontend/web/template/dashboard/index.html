@@ -1,0 +1,21 @@
+<div class="dashboard-main">
+    <div class="dashboard-active-offers">
+        <div class="counter-side">
+            <div class="ofex-box-counter">
+                <p class="counter-value">
+                    <!-- ko text: counters --><!-- /ko -->
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="dashboard-list-offers">
+        <div class="dashboard-list-title">
+            <h2 data-bind="text: title"></h2>
+        </div>
+        <div class="list-offers">
+            <!-- ko foreach: getRegion('dashboardListOffers') -->
+                <!-- ko template: getTemplate() --><!-- /ko -->
+            <!-- /ko -->
+        </div>
+    </div>
+</div>
