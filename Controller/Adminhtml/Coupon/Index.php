@@ -9,6 +9,9 @@ use Magento\Framework\View\Result\PageFactory;
 
 class Index extends Action
 {
+
+    const PAGE_TITLE = 'Ofex list';
+
     /**
      * @var PageFactory
      */
@@ -34,8 +37,7 @@ class Index extends Action
     public function execute()
     {
         $resultPage = $this->_pageFactory->create();
-        // $resultPage->setActiveMenu('Trenzalore_Ofex::coupon');
-        $resultPage->getConfig()->getTitle()->prepend(__('açsldkjfaçsdlkjf '));
+        $resultPage->getConfig()->getTitle()->prepend(__(self::PAGE_TITLE));
         return $resultPage;
     }
 

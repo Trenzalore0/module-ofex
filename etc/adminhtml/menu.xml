@@ -16,8 +16,8 @@
             module="Trenzalore_Ofex" 
             parent="Trenzalore_Ofex::ofex_main_menu" 
             sortOrder="40" 
-            action="ofex/coupon/" 
-            resource="Trenzalore_Ofex::coupon" 
+            action="ofex/coupon/"
+            resource="Magento_Backend::content"  
         />
     </menu>
 </config>

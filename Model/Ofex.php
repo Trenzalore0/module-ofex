@@ -5,26 +5,11 @@ declare(strict_types=1);
 namespace Trenzalore\Ofex\Model;
 
 use Magento\Framework\Model\AbstractModel;
-use Magento\Framework\DataObject\IdentityInterface;
+use Trenzalore\Ofex\Api\Data\OfexCouponCodeInterface;
+use Trenzalore\Ofex\Model\ResourceModel\Ofex as ResourceModelOfex;
 
-class Ofex extends AbstractModel implements IdentityInterface
+class Ofex extends AbstractModel implements OfexCouponCodeInterface
 {
-    const CACHE_TAG = 'trenzalore_ofex_rule';
-
-    /**
-     * Model cache tag for clear cache in after save and after delete
-     *
-     * @var string
-     */
-    protected $_cacheTag = self::CACHE_TAG;
-
-    /**
-     * Prefix of model events names
-     *
-     * @var string
-     */
-    protected $_eventPrefix = 'ofex';
-
     /**
      * Initialize resource model
      *
@@ -32,16 +17,66 @@ class Ofex extends AbstractModel implements IdentityInterface
      */
     protected function _construct()
     {
-        $this->_init('Trenzalore\Ofex\Model\ResourceModel\Ofex');
+        $this->_init(ResourceModelOfex::class);
     }
 
-    /**
-     * Return a unique id for the model.
-     *
-     * @return array
-     */
-    public function getIdentities()
+    public function getOfexId()
     {
-        return [self::CACHE_TAG . '_' . $this->getId()];
+        return $this->getData(self::OFEX_ID);
+    }
+
+    public function setOfexId($id)
+    {
+        return $this->setData(self::OFEX_ID, $id);
+    }
+
+    public function getOfexName()
+    {
+        return $this->getData(self::OFEX_NAME);
+    }
+
+    public function setOfexName($name)
+    {
+        return $this->setData(self::OFEX_NAME, $name);
+    }
+
+    public function getOfexDescription()
+    {
+        return $this->getData(self::OFEX_DESCRIPTION);
+    }
+
+    public function setOfexDescription($description)
+    {
+        return $this->setData(self::OFEX_DESCRIPTION, $description);
+    }
+
+    public function getOfexDiscountPercent()
+    {
+        return $this->getData(self::OFEX_DISCOUNT_PERCENT);
+    }
+
+    public function setOfexDiscountPercent($discountPercent)
+    {
+        return $this->setData(self::OFEX_DISCOUNT_PERCENT, $discountPercent);
+    }
+
+    public function getOfexCreatedAt()
+    {
+        return $this->getData(self::OFEX_CREATED_AT);
+    }
+
+    public function setOfexCreatedAt($createdAt)
+    {
+        return $this->setData(self::OFEX_CREATED_AT, $createdAt);
+    }
+
+    public function getOfexUpdatedAt()
+    {
+        return $this->getData(self::OFEX_UPDATED_AT);
+    }
+
+    public function setOfexUpdatedAt($updatedAt)
+    {
+        return $this->setData(self::OFEX_UPDATED_AT, $updatedAt);
     }
 }

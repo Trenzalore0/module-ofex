@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Trenzalore\Ofex\Api;
+namespace Trenzalore\Ofex\Api\Data;
 
 interface DashboardInterface
 {
@@ -15,6 +15,4 @@ interface DashboardInterface
      *  A method that returns the list offers component for a customer. 
      */
     public function getListOffersComponent($customerId, $storeId);
-
-
 }
