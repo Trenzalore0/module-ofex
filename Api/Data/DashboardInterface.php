@@ -6,13 +6,13 @@ namespace Trenzalore\Ofex\Api\Data;
 
 interface DashboardInterface
 {
-    /** 
-     *  A method that returns the active offers component for a customer. 
+    /**
+     *  A method that returns the active offers component for a customer.
      */
     public function getActiveOffersComponentIsEnable($customerId, $storeId);
 
     /**
-     *  A method that returns the list offers component for a customer. 
+     *  A method that returns the list offers component for a customer.
      */
     public function getListOffersComponent($customerId, $storeId);
 }

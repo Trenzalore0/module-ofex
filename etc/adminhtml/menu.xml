@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add 
-            id="Trenzalore_Ofex::ofex_main_menu" 
-            title="Ofex Menu" 
-            module="Trenzalore_Ofex" 
-            resource="Magento_Backend::content" 
+        <add
+            id="Trenzalore_Ofex::ofex_main_menu"
+            title="Ofex Menu"
+            module="Trenzalore_Ofex"
+            resource="Magento_Backend::content"
         />
 
-        <add 
-            id="Trenzalore_Ofex::coupon_ofex" 
-            title="Coupon Ofex" 
-            translate="title" 
-            module="Trenzalore_Ofex" 
-            parent="Trenzalore_Ofex::ofex_main_menu" 
-            sortOrder="40" 
+        <add
+            id="Trenzalore_Ofex::coupon_ofex"
+            title="Coupon Ofex"
+            translate="title"
+            module="Trenzalore_Ofex"
+            parent="Trenzalore_Ofex::ofex_main_menu"
+            sortOrder="40"
             action="ofex/coupon/"
-            resource="Magento_Backend::content"  
+            resource="Magento_Backend::content"
         />
     </menu>
 </config>
